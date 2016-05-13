@@ -34,7 +34,7 @@ gulp.task('less', function() {
 
 
 gulp.task('scripts', function() {
-  gulp.src('./assets/js/*.*').pipe(uglify()).pipe(logger({
+  gulp.src('./assets/js/*/*.*').pipe(uglify()).pipe(logger({
     before: 'Starting Compressing Javascript',
     after: 'Compressing complete!',
     extname: '.js',
