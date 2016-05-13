@@ -1,0 +1,5 @@
+assets/dist
+assets/dist/*
+node_modules
+node_modules/*
+dist
