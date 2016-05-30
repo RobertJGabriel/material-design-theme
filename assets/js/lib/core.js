@@ -1,17 +1,23 @@
-// something simple to get the current scroll direction
-// false === down | true === up
-var scrollDir = (function (oldOffset) {
-    return function (offset) {
-        var dir = offset < oldOffset;
-        oldOffset = offset;
-        return dir;
-    };
-}());
 
+$(function() {
+    //caches a jQuery object containing the header element
+    var header = $(".clearHeader");
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
 
-var header = document.querySelector('header');
-addEventListener('scroll', function () {
-    var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
-    header.style.top = -(scrollDir(scrollY) ? 0 : header.clientHeight) + 'px';
-    
+        if (scroll >= 100) {
+            $("#logo1").removeClass("hide");
+            $("#logo1").addClass("show");
+ $("#logo1").text(" - " + $('#logo2').text()) ;
+                     $("#logo2").removeClass("show");
+            $("#logo2").addClass("hide");
+        } else {
+                        $("#logo2").removeClass("hide");
+            $("#logo2").addClass("show");
+
+                     $("#logo1").removeClass("show");
+            $("#logo1").addClass("hide");
+
+        }
+    });
 });
