@@ -19,5 +19,12 @@ $(function() {
             $("#logo1").addClass("hide");
 
         }
+        
+        function init(){
+            console.log("ss");
+        }
+        
+        
+        
     });
 });
