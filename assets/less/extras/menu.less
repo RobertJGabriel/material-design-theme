@@ -1,0 +1,142 @@
+@color_1: #72739f;
+@color_2: #fff;
+@color_3: #033f72;
+@font-family_1: FontAwesome;
+@font-family_2: verdana;
+
+@import "//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css";
+.menu {
+
+	li {
+		a {
+			display: block;
+			text-indent: -500em;
+			height: 5em;
+			width: 5em;
+			line-height: 5em;
+			text-align: center;
+			color: @color_1;
+			position: relative;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+			&:before {
+				font-family: @font-family_1;
+				speak: none;
+				text-indent: 0em;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				font-size: 1.4em;
+			}
+			&:hover {
+				background: #ebebeb;
+				color: @color_2;
+			}
+		}
+
+		}
+	}
+
+.menu-bar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background: #f7f7f7;
+	z-index: 10;
+	overflow: hidden;
+	box-shadow: 2px 0 18px rgba(0, 0, 0, 0.26);
+	overflow: hidden;
+	right: 5em;
+	z-index: 5;
+	width: 0;
+	height: 0;
+	li {
+		a {
+			&:hover {
+				background: #ebebeb;
+				color: @color_2;
+			}
+			display: block;
+			height: 4em;
+			line-height: 4em;
+			text-align: center;
+			color: @color_1;
+			text-decoration: none;
+			position: relative;
+			font-family: @font-family_2;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+		}
+		&:first-child {
+			a {
+				height: 5em;
+				background: #f7f7f7;
+				color: @color_2;
+				line-height: 5;
+			}
+		}
+	}
+}
+.para {
+	color: @color_3;
+	padding-left: 100px;
+	font-size: 3em;
+	margin-bottom: 20px;
+}
+.open {
+	width: 10em;
+	height: 100%;
+      right: 0px;
+}
+@media all and (max-width: 500px) {
+	.container {
+		margin-top: 100px;
+	}
+	.menu {
+		height: 5em;
+		width: 100%;
+		li {
+			display: inline-block;
+			float: right;
+		}
+	}
+	.menu-bar {
+		li {
+			a {
+				width: 100%;
+			}
+		}
+		width: 100%;
+		left: 0;
+		height: 0;
+	}
+	.open {
+		width: 100%;
+		height: auto;
+        right: 0px;
+	}
+	.para {
+		padding-left: 5px;
+	}
+}
+@media screen and (max-height: 34em) {
+	.menu {
+		li {
+			font-size: 70%;
+		}
+	}
+	.menu-bar {
+		font-size: 70%;
+	}
+}
+@media screen and (max-height: 34em) and (max-width: 500px) {
+	.menu {
+		height: 3.5em;
+	}
+}
