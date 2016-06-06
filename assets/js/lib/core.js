@@ -25,13 +25,11 @@ $(function() {
     });
 
 
-    function init() {
-        console.log("ss");
-    }
 
 
     $(".menu-button").click(function(e) {
         $(".menu-bar").addClass("open");
+        $(".grey").addClass("show");
         e.stopPropagation();
 
     });
@@ -41,6 +39,7 @@ $(function() {
     $(document).click(function(e) {
         if (!$(e.target).is('.menu-bar *,.menu-bar')) {
             $(".menu-bar").removeClass("open");
+                $(".grey").removeClass("show");
         }
     });
 });
