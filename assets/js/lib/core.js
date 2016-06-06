@@ -40,7 +40,7 @@ $(function() {
 
     $(document).click(function(e) {
         if (!$(e.target).is('.menu-bar *,.menu-bar')) {
-            $(".menu-bar").hide();
+            $(".menu-bar").removeClass("open");
         }
     });
 });
