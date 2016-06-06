@@ -32,7 +32,7 @@ $(function() {
 
     $(".menu-button").click(function(e) {
         $(".menu-bar").addClass("open");
-      
+        e.stopPropagation();
 
     });
 
