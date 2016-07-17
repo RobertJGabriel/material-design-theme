@@ -19,6 +19,8 @@ $(function() {
         }
 
 
+      //   $("#gallery").removeClass("loadseffect").delay( 800 );
+$("#gallery").removeClass("loadseffect").delay( 200 );
 
 
 
