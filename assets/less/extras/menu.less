@@ -4,7 +4,7 @@
 @font-family_1: FontAwesome;
 @font-family_2: verdana;
 
-@import "//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css";
+
 .menu {
 
 	li {
@@ -91,8 +91,9 @@
 }
 .open {
 	width: 10em;
+	min-width: 239px;
 	height: 100%;
-      right: 0px;
+	right: 0;
 }
 @media all and (max-width: 500px) {
 	.container {
@@ -104,16 +105,21 @@
 		li {
 			display: inline-block;
 			float: right;
+			font-size: 13px;
+
+
 		}
 	}
 	.menu-bar {
 		li {
 			a {
 				width: 100%;
+							font-size: 13px;
 			}
 		}
 		width: 100%;
 		left: 0;
+					font-size: 13px;
 		height: 0;
 	}
 	.open {
