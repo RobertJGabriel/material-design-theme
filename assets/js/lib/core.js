@@ -3,24 +3,30 @@ $(function() {
     var header = $(".clearHeader");
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
+        if ($(window).width() < 960) {
+          $("#logo1").removeClass("hide");
+          $("#logo1").addClass("show");
+          $("#logo1").text(" - " + $('#logo2').text());
+          $("#logo2").removeClass("show");
+          $("#logo2").addClass("hide");
+        }
+        else {
+          if (scroll >= 100) {
+              $("#logo1").removeClass("hide");
+              $("#logo1").addClass("show");
+              $("#logo1").text(" - " + $('#logo2').text());
+              $("#logo2").removeClass("show");
+              $("#logo2").addClass("hide");
+          } else {
+              $("#logo2").removeClass("hide");
+              $("#logo2").addClass("show");
+              $("#logo1").removeClass("show");
+              $("#logo1").addClass("hide");
 
-        if (scroll >= 100) {
-            $("#logo1").removeClass("hide");
-            $("#logo1").addClass("show");
-            $("#logo1").text(" - " + $('#logo2').text());
-            $("#logo2").removeClass("show");
-            $("#logo2").addClass("hide");
-        } else {
-            $("#logo2").removeClass("hide");
-            $("#logo2").addClass("show");
-            $("#logo1").removeClass("show");
-            $("#logo1").addClass("hide");
+          }
 
         }
 
-
-      //   $("#gallery").removeClass("loadseffect").delay( 800 );
-$("#gallery").removeClass("loadseffect").delay( 200 );
 
 
 
