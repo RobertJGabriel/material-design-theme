@@ -24,8 +24,8 @@
 				speak: none;
 				text-indent: 0em;
 				position: absolute;
-				
-				left: 0;
+
+				right: 0;
 				width: 100%;
 				height: 100%;
 				font-size: 1.4em;
@@ -40,10 +40,8 @@
 	}
 
 .menu-bar {
+		transition: 1s;
 	position: fixed;
-
-	right: 0;
-	height: 100%;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -52,10 +50,11 @@
 	overflow: hidden;
 	box-shadow: 2px 0 18px rgba(0, 0, 0, 0.26);
 	overflow: hidden;
-	right: 5em;
+	right: -20em;
 	z-index: 5;
-	width: 0;
-	height: 0;
+	width: 10em;
+	min-width: 239px;
+	height: 100%;
 	li {
 		a {
 			&:hover {
@@ -93,7 +92,7 @@
 	width: 10em;
 	min-width: 239px;
 	height: 100%;
-	right: 0;
+	right:0em;
 	transition: 1s;
 
 }
@@ -120,7 +119,7 @@
 			}
 		}
 		width: 100%;
-		left: 0;
+		right: 0;
 					font-size: 13px;
 		height: 0;
 	}
